@@ -91,7 +91,54 @@ void FontSize(short _size)
         SetFontSize(h, size);
     }
 }
-
+class Student{
+	private:
+		int counter = 0;
+		int id; 
+		std::string name;
+		std::string phone;
+		std::string email;
+	public:
+		Student(){
+			id = 0;
+			name = "";
+			phone = "";
+			email = "";
+		}
+		Student(std::string name,std::string phone,std::string email){
+			id = counter++;
+			name = name;
+			phone = phone;
+			email = email;
+		}
+		void addStudent(){							
+				rect(19,1,125,9); 
+				textcolor(7);
+				gotoxy(130, 10);
+				std::cout << "Add Student ";
+				textcolor(5);
+				gotoxy(110,12);	std::cout << "ÚÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÂÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍ¿" ;
+				gotoxy(110,13);	std::cout << "³    First Name     ³                            ³" ;
+				gotoxy(110,14);	std::cout << "ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´" ;
+				gotoxy(110,15);	std::cout << "³    Last Name      ³                            ³" ;
+				gotoxy(110,16);	std::cout << "ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´" ;
+				gotoxy(110,17);	std::cout << "³     Age           ³                            ³" ;
+				gotoxy(110,18);	std::cout << "ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´" ;
+				gotoxy(110,19);	std::cout << "³     Phone         ³                            ³" ;
+				gotoxy(110,20);	std::cout << "ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´" ;
+				gotoxy(110,21);	std::cout << "³     Email         ³                            ³" ;
+				gotoxy(110,22);	std::cout << "ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´" ;
+				gotoxy(110,23);	std::cout << "³     Code          ³                            ³" ;
+				gotoxy(110,24);	std::cout << "ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´" ;
+				gotoxy(110,25);	std::cout << "³     Country       ³                            ³" ;
+				gotoxy(110,26);	std::cout << "ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´" ;
+				gotoxy(110,27);	std::cout << "³     City          ³                            ³" ;
+				gotoxy(110,28);	std::cout << "ÃÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÅÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄÄ´" ;
+				gotoxy(110,29);	std::cout << "³     Zip code      ³                            ³" ;
+				gotoxy(110,30);	std::cout << "ÀÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÁÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÍÙ" ;
+				
+		}
+};
 int menu(int choice)
 {
 	rect(32,18,25,8); 
@@ -139,7 +186,19 @@ int menu(int choice)
 	textcolor(7);
 	std::cout << "Enter a choice: ";
 	textcolor(5);
+	do{
+	
 	std::cin >> choice;
+	
+	switch(choice)
+	{
+		case 1:
+			{
+				Student *s = new Student();
+				s->addStudent();
+			}
+	}
+	}while(choice < 0 || choice > 6);
 	
 }
 
